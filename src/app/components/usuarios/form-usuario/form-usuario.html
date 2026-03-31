@@ -1,0 +1,24 @@
+<p>form-usuario works!</p>
+
+<h3>{{form.id ? 'Editar Usuario' : 'Agregar Usuario'}}</h3>
+
+<div>
+    <label>Nombre</label>
+    <input [(ngModel)]="form.nombre" type="text" placeholder="Ingresar el nombre">
+</div>
+<div>
+    <label >Email</label>
+    <input [(ngModel)]="form.email" type="email" placeholder="Ingresar el email">
+</div>
+<div>
+    <label >Rol</label>
+    <select [(ngModel)]="form.rol">
+        <option value="">Seleccione un rol:</option>
+        <option value="Administrativo">Administrativo</option>
+        <option value="Docente">Docente</option>
+        <option value="Estudiante">Estudiante</option>
+    </select>
+
+</div>
+<button (click)="guardarUsuario()">Guardar</button>
+<button (click)="cancelarEdicion()">Cancelar</button>
